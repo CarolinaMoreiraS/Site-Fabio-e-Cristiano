@@ -9,23 +9,23 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Portal | Escolha sua área</title>
+    <title>CGCS — Contabilidade & Assessoria</title>
 
     <meta
         name="description"
-        content="Soluções especializadas para diferentes áreas de gestão."
+        content="CGCS Contabilidade & Assessoria. Soluções especializadas em contabilidade, terceiro setor e gestão condominial."
     >
 
-    <!-- FONTES -->
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <!-- ÍCONES -->
+    <!-- FONT AWESOME -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -37,11 +37,13 @@
 
 <body>
 
-    <!-- ==================================================
-         FUNDO
-    =================================================== -->
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
 
-    <div class="background-grid"></div>
+<div class="page-background" aria-hidden="true">
+
+    <div class="grid-background"></div>
 
     <div class="glow glow-one"></div>
     <div class="glow glow-two"></div>
@@ -49,508 +51,187 @@
     <div class="orb orb-one"></div>
     <div class="orb orb-two"></div>
 
+</div>
 
-    <!-- ==================================================
-         HEADER
-    =================================================== -->
 
-    <header class="portal-header">
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-        <div class="container header-content">
+<header class="header" id="header">
 
-            <!--
-                Futuramente colocamos aqui
-                o nome/logo da empresa.
-            -->
+    <div class="container header-container">
 
-            <a href="index.html" class="brand">
+        <!-- MARCA -->
+<a href="#inicio" class="brand brand-logo">
+    <img
+        src="logo-cgcs.png"
+        alt="CGCS - Contabilidade & Assessoria"
+        class="header-logo"
+    >
+</a>
 
-                <div class="brand-symbol">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
 
-                <div class="brand-text">
-                    <strong>PORTAL</strong>
-                    <small>ECOSSISTEMA DE SOLUÇÕES</small>
-                </div>
+        <!-- MENU -->
 
+        <nav class="nav" id="nav">
+
+            <a href="#inicio">
+                Início
             </a>
 
+            <a href="#solucoes">
+                Soluções
+            </a>
 
-            <div class="header-right">
+            <a href="#cgcs">
+                CGCS
+            </a>
 
-                <span class="header-message">
-                    Escolha sua área
-                </span>
+            <a href="#contato">
+                Contato
+            </a>
 
-                <button
-                    class="theme-toggle"
-                    id="themeToggle"
-                    aria-label="Alterar tema"
-                    title="Alterar tema"
-                >
-                    <i
-                        class="fa-regular fa-moon"
-                        id="themeIcon"
-                    ></i>
-                </button>
+        </nav>
 
-            </div>
+
+        <!-- AÇÕES -->
+
+        <div class="header-actions">
+
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Alternar tema"
+            >
+                <i
+                    class="fa-regular fa-moon"
+                    id="themeIcon"
+                ></i>
+            </button>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </div>
 
-    </header>
+    </div>
 
+</header>
 
-    <!-- ==================================================
-         MAIN
-    =================================================== -->
 
-    <main>
 
-        <section class="hero">
+<main>
 
-            <div class="container">
 
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-                <!-- ======================================
-                     INTRO
-                ======================================= -->
+<section class="hero" id="inicio">
 
-                <div class="hero-intro">
+    <div class="container hero-container">
 
-                    <div class="eyebrow">
 
-                        <span></span>
+        <!-- MARCA CENTRAL -->
 
-                        SOLUÇÕES QUE CONECTAM
+        <div class="hero-brand reveal">
 
-                        <span></span>
+    <img
+        src="logo-cgcs.png"
+        alt="CGCS - Contabilidade & Assessoria"
+        class="hero-logo"
+    >
 
-                    </div>
+</div>
 
 
-                    <h1>
-                        Um ecossistema.
-                        <span>Três possibilidades.</span>
-                    </h1>
 
+        <!-- EYEBROW -->
 
-                    <p>
-                        Soluções especializadas para diferentes
-                        necessidades. Escolha uma área para
-                        continuar.
-                    </p>
+        <div class="eyebrow reveal">
 
+            <span class="eyebrow-line"></span>
 
-                    <div class="scroll-indicator">
+            <span>
+                ECOSSISTEMA DE SOLUÇÕES
+            </span>
 
-                        <span>
-                            EXPLORE
-                        </span>
+            <span class="eyebrow-line"></span>
 
-                        <i class="fa-solid fa-arrow-down"></i>
+        </div>
 
-                    </div>
 
-                </div>
 
+        <!-- TÍTULO -->
 
+        <h1 class="reveal">
 
-                <!-- ======================================
-                     CARDS
-                ======================================= -->
+            Contabilidade que entende
 
-                <div class="areas-grid">
+            <span>
+                diferentes realidades.
+            </span>
 
+        </h1>
 
-                    <!-- ==================================
-                         CONDOMINIAL
-                    =================================== -->
 
-                    <a
-                        href="condominial.html"
-                        class="area-card condominium-card"
-                    >
 
-                        <div class="card-background-number">
-                            01
-                        </div>
+        <p class="hero-description reveal">
 
+            Soluções contábeis e assessoria especializada
+            para empresas, organizações do Terceiro Setor
+            e gestão condominial.
 
-                        <div class="card-top">
+        </p>
 
-                            <span class="card-number">
-                                01
-                            </span>
 
-                            <span class="card-status">
-                                ACESSAR
-                            </span>
 
-                        </div>
+        <a
+            href="#solucoes"
+            class="explore-button reveal"
+        >
 
+            <span>
+                Conheça nossas áreas
+            </span>
 
-                        <!-- ILUSTRAÇÃO -->
-
-                        <div class="card-visual building-visual">
-
-                            <div class="building-main">
-
-                                <div class="building-line line-one"></div>
-                                <div class="building-line line-two"></div>
-                                <div class="building-line line-three"></div>
-
-                                <div class="building-windows">
-
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                </div>
-
-                            </div>
-
-
-                            <div class="building-side"></div>
-
-                            <div class="visual-circle"></div>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <div class="card-icon">
-
-                                <i class="fa-regular fa-building"></i>
-
-                            </div>
-
-
-                            <span class="card-category">
-                                GESTÃO
-                            </span>
-
-
-                            <h2>
-                                Condominial
-                            </h2>
-
-
-                            <p>
-                                Administração e soluções
-                                inteligentes para uma gestão
-                                condominial mais eficiente.
-                            </p>
-
-
-                            <div class="card-link">
-
-                                <span>
-                                    Explorar área
-                                </span>
-
-                                <div class="arrow-circle">
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- ==================================
-                         CONTABILIDADE
-                    =================================== -->
-
-                    <!--
-                        ALTERE contabilidade.html
-                        caso o nome do seu arquivo seja outro.
-                    -->
-
-                    <a
-                        href="contabilidade.html"
-                        class="area-card accounting-card"
-                    >
-
-                        <div class="card-background-number">
-                            02
-                        </div>
-
-
-                        <div class="card-top">
-
-                            <span class="card-number">
-                                02
-                            </span>
-
-                            <span class="card-status">
-                                ACESSAR
-                            </span>
-
-                        </div>
-
-
-                        <!-- GRÁFICO ABSTRATO -->
-
-                        <div class="card-visual chart-visual">
-
-                            <div class="chart-lines">
-
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-
-                            </div>
-
-
-                            <div class="chart-bars">
-
-                                <span style="height: 32%"></span>
-                                <span style="height: 48%"></span>
-                                <span style="height: 40%"></span>
-                                <span style="height: 67%"></span>
-                                <span style="height: 82%"></span>
-
-                            </div>
-
-
-                            <div class="chart-line">
-
-                                <i></i>
-                                <i></i>
-                                <i></i>
-                                <i></i>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <div class="card-icon">
-
-                                <i class="fa-solid fa-chart-line"></i>
-
-                            </div>
-
-
-                            <span class="card-category">
-                                ESTRATÉGIA
-                            </span>
-
-
-                            <h2>
-                                Contabilidade
-                            </h2>
-
-
-                            <p>
-                                Inteligência contábil,
-                                organização e estratégia para
-                                apoiar decisões mais seguras.
-                            </p>
-
-
-                            <div class="card-link">
-
-                                <span>
-                                    Explorar área
-                                </span>
-
-                                <div class="arrow-circle">
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-
-
-                    <!-- ==================================
-                         TERCEIRO SETOR
-                    =================================== -->
-
-                    <a
-                        href="terceirosetor.html"
-                        class="area-card social-card"
-                    >
-
-                        <div class="card-background-number">
-                            03
-                        </div>
-
-
-                        <div class="card-top">
-
-                            <span class="card-number">
-                                03
-                            </span>
-
-                            <span class="card-status">
-                                ACESSAR
-                            </span>
-
-                        </div>
-
-
-                        <!-- CONEXÕES -->
-
-                        <div class="card-visual network-visual">
-
-                            <div class="network-center">
-
-                                <i class="fa-solid fa-circle-nodes"></i>
-
-                            </div>
-
-
-                            <span class="network-line network-line-one"></span>
-                            <span class="network-line network-line-two"></span>
-                            <span class="network-line network-line-three"></span>
-
-
-                            <div class="network-node node-one">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-
-
-                            <div class="network-node node-two">
-                                <i class="fa-solid fa-hand-holding-heart"></i>
-                            </div>
-
-
-                            <div class="network-node node-three">
-                                <i class="fa-solid fa-people-group"></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="card-content">
-
-                            <div class="card-icon">
-
-                                <i class="fa-solid fa-people-group"></i>
-
-                            </div>
-
-
-                            <span class="card-category">
-                                IMPACTO
-                            </span>
-
-
-                            <h2>
-                                Terceiro Setor
-                            </h2>
-
-
-                            <p>
-                                Gestão e soluções direcionadas
-                                a organizações, projetos e
-                                instituições.
-                            </p>
-
-
-                            <div class="card-link">
-
-                                <span>
-                                    Explorar área
-                                </span>
-
-                                <div class="arrow-circle">
-
-                                    <i class="fa-solid fa-arrow-right"></i>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </a>
-
-                </div>
-
-
-
-                <!-- ======================================
-                     FOOTER DA HOME
-                ======================================= -->
-
-                <div class="portal-message">
-
-                    <span></span>
-
-                    <p>
-                        Três áreas. Um propósito:
-                        <strong>
-                            transformar gestão em resultado.
-                        </strong>
-                    </p>
-
-                    <span></span>
-
-                </div>
-
+            <div>
+                <i class="fa-solid fa-arrow-down"></i>
             </div>
 
-        </section>
-
-    </main>
+        </a>
 
 
-    <!-- ==================================================
-         FOOTER
-    =================================================== -->
 
-    <footer>
+        <!-- INDICADORES -->
 
-        <div class="container footer-content">
-
-            <p>
-                © <span id="year"></span>
-                Todos os direitos reservados.
-            </p>
-
+        <div class="hero-indicators reveal">
 
             <div>
 
-                <span>
-                    CONDOMINIAL
+                <span class="indicator-number">
+                    01
                 </span>
-
-                <i></i>
 
                 <span>
                     CONTABILIDADE
                 </span>
 
-                <i></i>
+            </div>
+
+
+            <div>
+
+                <span class="indicator-number">
+                    02
+                </span>
 
                 <span>
                     TERCEIRO SETOR
@@ -558,12 +239,966 @@
 
             </div>
 
+
+            <div>
+
+                <span class="indicator-number">
+                    03
+                </span>
+
+                <span>
+                    CONDOMINIAL
+                </span>
+
+            </div>
+
         </div>
 
-    </footer>
+    </div>
 
 
-    <script src="inicio.js"></script>
+    <div class="scroll-indicator">
+
+        <span>SCROLL</span>
+
+        <div></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOLUÇÕES
+===================================================== -->
+
+<section
+    class="solutions-section"
+    id="solucoes"
+>
+
+    <div class="container">
+
+
+        <!-- CABEÇALHO -->
+
+        <div class="section-heading reveal">
+
+            <div>
+
+                <span class="section-number">
+                    01 / SOLUÇÕES
+                </span>
+
+                <h2>
+                    Um ecossistema.
+                    <span>Três segmentos.</span>
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Conhecimento especializado para diferentes
+                formas de gestão, conectado por um mesmo
+                propósito: transformar organização em
+                resultado.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- CARDS -->
+
+        <div class="solutions-grid">
+
+
+            <!-- =========================================
+                 CONTABILIDADE
+            ========================================== -->
+
+            <article
+                class="solution-card accounting-card reveal"
+                data-card
+            >
+
+                <div class="card-top">
+
+                    <span class="card-index">
+                        01
+                    </span>
+
+                    <span class="card-tag">
+                        ÁREA PRINCIPAL
+                    </span>
+
+                </div>
+
+
+                <!-- ILUSTRAÇÃO -->
+
+                <div class="card-visual accounting-visual">
+
+                    <div class="accounting-window">
+
+                        <div class="window-top">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="chart-area">
+
+                            <div
+                                class="chart-bar"
+                                style="--height: 38%"
+                            ></div>
+
+                            <div
+                                class="chart-bar"
+                                style="--height: 56%"
+                            ></div>
+
+                            <div
+                                class="chart-bar"
+                                style="--height: 43%"
+                            ></div>
+
+                            <div
+                                class="chart-bar"
+                                style="--height: 72%"
+                            ></div>
+
+                            <div
+                                class="chart-bar"
+                                style="--height: 87%"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="chart-line"></div>
+
+                    </div>
+
+
+                    <div class="floating-data">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <span>
+                            Gestão
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTEÚDO -->
+
+                <div class="card-content">
+
+                    <span class="card-category">
+                        CONTABILIDADE & ASSESSORIA
+                    </span>
+
+                    <h3>
+                        Contabilidade
+                    </h3>
+
+                    <p>
+
+                        Soluções contábeis e assessoria
+                        para apoiar uma gestão mais
+                        organizada, segura e eficiente.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <!--
+                        FUTURAMENTE:
+                        troque href="#" pela página
+                        de contabilidade.
+                    -->
+
+                    <a
+                        href="#cgcs"
+                        class="card-link"
+                    >
+
+                        <span>
+                            Conhecer a CGCS
+                        </span>
+
+                        <div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 TERCEIRO SETOR
+            ========================================== -->
+
+            <article
+                class="solution-card third-sector-card reveal"
+                data-card
+            >
+
+                <div class="card-top">
+
+                    <span class="card-index">
+                        02
+                    </span>
+
+                    <span class="card-tag">
+                        ESPECIALIZADO
+                    </span>
+
+                </div>
+
+
+                <!-- ILUSTRAÇÃO -->
+
+                <div class="card-visual network-visual">
+
+                    <div class="network">
+
+                        <span class="network-line line-a"></span>
+                        <span class="network-line line-b"></span>
+                        <span class="network-line line-c"></span>
+                        <span class="network-line line-d"></span>
+
+                        <span class="node node-main">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </span>
+
+                        <span class="node node-a"></span>
+                        <span class="node node-b"></span>
+                        <span class="node node-c"></span>
+                        <span class="node node-d"></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span class="card-category">
+                        IMPACTO & TRANSPARÊNCIA
+                    </span>
+
+                    <h3>
+                        Terceiro Setor
+                    </h3>
+
+                    <p>
+
+                        Contabilidade especializada para
+                        organizações, associações e
+                        instituições que transformam
+                        impacto social em resultados.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <a
+                        href="terceirosetor.html"
+                        class="card-link"
+                    >
+
+                        <span>
+                            Explorar segmento
+                        </span>
+
+                        <div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================================
+                 CONDOMINIAL
+            ========================================== -->
+
+            <article
+                class="solution-card condo-card reveal"
+                data-card
+            >
+
+                <div class="card-top">
+
+                    <span class="card-index">
+                        03
+                    </span>
+
+                    <span class="card-tag">
+                        ESPECIALIZADO
+                    </span>
+
+                </div>
+
+
+                <!-- ILUSTRAÇÃO -->
+
+                <div class="card-visual building-visual">
+
+                    <div class="building building-back">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="building building-front">
+
+                        <div class="building-windows">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="building-ground"></div>
+
+
+                    <div class="building-status">
+
+                        <span></span>
+
+                        Gestão eficiente
+
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <span class="card-category">
+                        GESTÃO & EFICIÊNCIA
+                    </span>
+
+                    <h3>
+                        Condominial
+                    </h3>
+
+                    <p>
+
+                        Administração e soluções para
+                        condomínios com foco em
+                        transparência, tecnologia e
+                        eficiência na gestão.
+
+                    </p>
+
+                </div>
+
+
+                <div class="card-footer">
+
+                    <a
+                        href="condomínio.html"
+                        class="card-link"
+                    >
+
+                        <span>
+                            Explorar segmento
+                        </span>
+
+                        <div>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CGCS
+===================================================== -->
+
+<section
+    class="about-section"
+    id="cgcs"
+>
+
+    <div class="about-grid-background"></div>
+
+
+    <div class="container about-container">
+
+
+        <!-- LADO ESQUERDO -->
+
+        <div class="about-heading reveal">
+
+            <span class="section-number light">
+                02 / CGCS
+            </span>
+
+
+            <h2>
+
+                Contabilidade,
+
+                <span>
+                    assessoria
+                </span>
+
+                e gestão.
+
+            </h2>
+
+        </div>
+
+
+
+        <!-- LADO DIREITO -->
+
+        <div class="about-content reveal">
+
+            <span class="about-label">
+                CGCS — CONTABILIDADE & ASSESSORIA
+            </span>
+
+
+            <p class="about-main-text">
+
+                Diferentes segmentos possuem diferentes
+                necessidades. Por isso, a CGCS conecta
+                conhecimento contábil, assessoria e soluções
+                especializadas para apoiar cada realidade
+                de gestão.
+
+            </p>
+
+
+            <p class="about-secondary-text">
+
+                Empresas, organizações do Terceiro Setor
+                e condomínios encontram soluções pensadas
+                para suas particularidades, sem abrir mão
+                de organização, transparência e eficiência.
+
+            </p>
+
+
+
+            <div class="about-values">
+
+
+                <div>
+
+                    <span>01</span>
+
+                    <strong>
+                        Proximidade
+                    </strong>
+
+                    <p>
+                        Soluções alinhadas à realidade
+                        de cada cliente.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>02</span>
+
+                    <strong>
+                        Transparência
+                    </strong>
+
+                    <p>
+                        Informação clara para decisões
+                        mais seguras.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <span>03</span>
+
+                    <strong>
+                        Eficiência
+                    </strong>
+
+                    <p>
+                        Gestão orientada à organização
+                        e aos resultados.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MANIFESTO
+===================================================== -->
+
+<section class="manifesto-section">
+
+    <div class="container manifesto-container reveal">
+
+        <span>
+            CGCS
+        </span>
+
+
+        <h2>
+
+            Três segmentos.
+
+            <strong>
+                Um propósito.
+            </strong>
+
+        </h2>
+
+
+        <p>
+            Transformar gestão em resultado.
+        </p>
+
+
+        <div class="manifesto-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTATO
+===================================================== -->
+
+<!-- =====================================================
+     CONTATO
+===================================================== -->
+
+<section class="contact-section" id="contato">
+
+    <div class="container contact-container">
+
+        <!-- TEXTO -->
+
+        <!-- CONTATO VIA WHATSAPP -->
+
+<div class="whatsapp-contact">
+
+    <span class="whatsapp-label">
+        PREFERE FALAR DIRETAMENTE?
+    </span>
+
+    <a
+      href="https://wa.me/5521976603838?text=Olá%21%20Vim%20pelo%20site%20da%20CGCS%20e%20gostaria%20de%20mais%20informações."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-button"
+    >
+
+        <div class="whatsapp-button-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+
+        <div class="whatsapp-button-text">
+            <small>ATENDIMENTO VIA WHATSAPP</small>
+            <strong>Fale com a CGCS</strong>
+        </div>
+
+        <div class="whatsapp-button-arrow">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+
+    </a>
+
+</div>
+
+
+        <!-- FORMULÁRIO -->
+
+        <div class="contact-form-card reveal">
+
+            <div class="form-header">
+
+                <div>
+                    <span>FALE COM A CGCS</span>
+                    <h3>Solicite um contato</h3>
+                </div>
+
+                <div class="form-header-icon">
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+
+            </div>
+
+
+            <form id="contactForm" class="contact-form">
+
+                <!-- NOME -->
+
+                <div class="form-group">
+
+                    <label for="nome">
+                        Nome
+                        <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Seu nome"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL + TELEFONE -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-mail
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="seu@email.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="telefone">
+                            Telefone
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="telefone"
+                                name="telefone"
+                                placeholder="(00) 00000-0000"
+                                maxlength="15"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ÁREA -->
+
+                <div class="form-group">
+
+                    <label for="area">
+                        Área de interesse
+                        <span>*</span>
+                    </label>
+
+                    <div class="select-box">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <select
+                            id="area"
+                            name="area"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione uma área
+                            </option>
+
+                            <option value="Contabilidade">
+                                Contabilidade
+                            </option>
+
+                            <option value="Terceiro Setor">
+                                Terceiro Setor
+                            </option>
+
+                            <option value="Condominial">
+                                Condominial
+                            </option>
+
+                            <option value="Outro">
+                                Outro assunto
+                            </option>
+
+                        </select>
+
+                        <i class="fa-solid fa-chevron-down select-arrow"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPRESA / ORGANIZAÇÃO -->
+
+                <div class="form-group">
+
+                    <label for="empresa">
+                        Empresa ou organização
+                    </label>
+
+                    <div class="input-box">
+
+                        <i class="fa-regular fa-building"></i>
+
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            placeholder="Nome da empresa ou organização"
+                            autocomplete="organization"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENSAGEM -->
+
+                <div class="form-group">
+
+                    <div class="form-label-row">
+
+                        <label for="mensagem">
+                            Como podemos ajudar?
+                            <span>*</span>
+                        </label>
+
+                        <small id="charCount">
+                            0 / 500
+                        </small>
+
+                    </div>
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        maxlength="500"
+                        placeholder="Conte um pouco sobre o que você precisa..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- LGPD -->
+
+                <label class="privacy-check">
+
+                    <input
+                        type="checkbox"
+                        id="privacidade"
+                        required
+                    >
+
+                    <span class="checkbox-custom">
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <span>
+                        Concordo com o uso dos meus dados
+                        para retorno deste contato.
+                    </span>
+
+                </label>
+
+
+                <!-- BOTÃO -->
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                    id="submitButton"
+                >
+
+                    <span>
+                        Enviar solicitação
+                    </span>
+
+                    <div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+
+                </button>
+
+
+                <div
+                    class="form-status"
+                    id="formStatus"
+                ></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+
+        <div class="footer-brand">
+
+            <div class="brand-symbol small">
+                <span>C</span>
+            </div>
+
+
+            <div>
+
+                <strong>
+                    CGCS
+                </strong>
+
+                <span>
+                    CONTABILIDADE & ASSESSORIA
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <p>
+
+            © <span id="year"></span>
+            CGCS — Todos os direitos reservados. - Site feito por Poubel-Lab
+
+        </p>
+
+
+
+        <a href="#inicio">
+
+            Voltar ao topo
+
+            <i class="fa-solid fa-arrow-up"></i>
+
+        </a>
+
+    </div>
+
+</footer>
+
+
+
+<script src="inicio.js"></script>
 
 </body>
 </html>

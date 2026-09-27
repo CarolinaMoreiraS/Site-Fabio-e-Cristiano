@@ -1,12 +1,373 @@
-/* ======================================================
-   PORTAL
-   JAVASCRIPT
-====================================================== */
+/* =====================================================
+   CGCS — PORTAL / HOME
+===================================================== */
 
 
-/* ======================================================
-   ANO
-====================================================== */
+/* =====================================================
+   ELEMENTOS
+===================================================== */
+
+const header =
+    document.getElementById("header");
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+const themeIcon =
+    document.getElementById("themeIcon");
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const nav =
+    document.getElementById("nav");
+
+const cards =
+    document.querySelectorAll("[data-card]");
+
+
+
+/* =====================================================
+   HEADER AO ROLAR
+===================================================== */
+
+function updateHeader() {
+
+    if (window.scrollY > 25) {
+
+        header.classList.add(
+            "scrolled"
+        );
+
+    } else {
+
+        header.classList.remove(
+            "scrolled"
+        );
+
+    }
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateHeader
+);
+
+
+updateHeader();
+
+
+
+/* =====================================================
+   MENU MOBILE
+===================================================== */
+
+menuToggle.addEventListener(
+    "click",
+    () => {
+
+        nav.classList.toggle(
+            "open"
+        );
+
+
+        const icon =
+            menuToggle.querySelector("i");
+
+
+        if (
+            nav.classList.contains("open")
+        ) {
+
+            icon.classList.remove(
+                "fa-bars"
+            );
+
+            icon.classList.add(
+                "fa-xmark"
+            );
+
+        } else {
+
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   FECHAR MENU AO CLICAR
+===================================================== */
+
+document
+    .querySelectorAll(".nav a")
+    .forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                nav.classList.remove(
+                    "open"
+                );
+
+
+                const icon =
+                    menuToggle.querySelector("i");
+
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+        );
+
+    });
+
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+const savedTheme =
+    localStorage.getItem(
+        "cgcs-theme"
+    );
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add(
+        "dark-theme"
+    );
+
+
+    themeIcon.classList.remove(
+        "fa-moon"
+    );
+
+    themeIcon.classList.add(
+        "fa-sun"
+    );
+
+}
+
+
+
+themeToggle.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "dark-theme"
+        );
+
+
+        const darkMode =
+            document.body.classList.contains(
+                "dark-theme"
+            );
+
+
+        if (darkMode) {
+
+            themeIcon.classList.remove(
+                "fa-moon"
+            );
+
+            themeIcon.classList.add(
+                "fa-sun"
+            );
+
+        } else {
+
+            themeIcon.classList.remove(
+                "fa-sun"
+            );
+
+            themeIcon.classList.add(
+                "fa-moon"
+            );
+
+        }
+
+
+        localStorage.setItem(
+            "cgcs-theme",
+            darkMode
+                ? "dark"
+                : "light"
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   REVEAL AO ROLAR
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target
+                            .classList
+                            .add(
+                                "visible"
+                            );
+
+
+                        revealObserver
+                            .unobserve(
+                                entry.target
+                            );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+    element => {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   EFEITO 3D NOS CARDS
+===================================================== */
+
+cards.forEach(card => {
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            /*
+                No celular não executamos
+                o efeito de perspectiva.
+            */
+
+            if (
+                window.innerWidth < 900
+            ) {
+                return;
+            }
+
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            const mouseX =
+                event.clientX -
+                rect.left;
+
+
+            const mouseY =
+                event.clientY -
+                rect.top;
+
+
+            const centerX =
+                rect.width / 2;
+
+
+            const centerY =
+                rect.height / 2;
+
+
+            const rotateX =
+                (
+                    mouseY -
+                    centerY
+                ) / 45;
+
+
+            const rotateY =
+                (
+                    centerX -
+                    mouseX
+                ) / 45;
+
+
+            card.style.transform =
+                `
+                    perspective(1000px)
+                    translateY(-8px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                `;
+
+        }
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform =
+                "";
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   ANO AUTOMÁTICO
+===================================================== */
 
 const yearElement =
     document.getElementById("year");
@@ -21,243 +382,137 @@ if (yearElement) {
 
 
 
-/* ======================================================
-   TEMA CLARO / ESCURO
-====================================================== */
+/* =====================================================
+   ESC FECHA MENU
+===================================================== */
 
-const themeToggle =
-    document.getElementById("themeToggle");
+document.addEventListener(
+    "keydown",
+    event => {
 
+        if (
+            event.key === "Escape"
+        ) {
 
-const themeIcon =
-    document.getElementById("themeIcon");
-
-
-const savedTheme =
-    localStorage.getItem("portal-theme");
-
-
-
-/*
-    CARREGA TEMA SALVO
-*/
-
-if (savedTheme === "dark") {
-
-    document.body.classList.add(
-        "dark-theme"
-    );
-
-    changeIcon(true);
-
-}
-
-
-
-/*
-    ALTERAR TEMA
-*/
-
-themeToggle.addEventListener(
-    "click",
-    () => {
-
-        document.body.classList.toggle(
-            "dark-theme"
-        );
-
-
-        const isDark =
-            document.body.classList.contains(
-                "dark-theme"
+            nav.classList.remove(
+                "open"
             );
 
 
-        changeIcon(isDark);
+            const icon =
+                menuToggle.querySelector("i");
 
 
-        localStorage.setItem(
-            "portal-theme",
-            isDark
-                ? "dark"
-                : "light"
-        );
-
-    }
-);
-
-
-
-/*
-    TROCA LUA / SOL
-*/
-
-function changeIcon(isDark) {
-
-    if (isDark) {
-
-        themeIcon.classList.remove(
-            "fa-moon"
-        );
-
-        themeIcon.classList.add(
-            "fa-sun"
-        );
-
-    } else {
-
-        themeIcon.classList.remove(
-            "fa-sun"
-        );
-
-        themeIcon.classList.add(
-            "fa-moon"
-        );
-
-    }
-
-}
-
-
-
-/* ======================================================
-   ANIMAÇÃO DE ENTRADA
-====================================================== */
-
-const intro =
-    document.querySelector(
-        ".hero-intro"
-    );
-
-
-const cards =
-    document.querySelectorAll(
-        ".area-card"
-    );
-
-
-/*
-    INTRO
-*/
-
-intro.classList.add("reveal");
-
-
-setTimeout(() => {
-
-    intro.classList.add(
-        "visible"
-    );
-
-}, 100);
-
-
-
-/*
-    CARDS
-*/
-
-cards.forEach(
-    (card, index) => {
-
-        card.classList.add(
-            "reveal"
-        );
-
-
-        setTimeout(() => {
-
-            card.classList.add(
-                "visible"
+            icon.classList.remove(
+                "fa-xmark"
             );
 
-        }, 350 + (index * 140));
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
 
     }
 );
+/* =====================================================
+   FORMULÁRIO CGCS
+===================================================== */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const telefone =
+    document.getElementById("telefone");
+
+const mensagem =
+    document.getElementById("mensagem");
+
+const charCount =
+    document.getElementById("charCount");
+
+const formStatus =
+    document.getElementById("formStatus");
 
 
+/* CONTADOR */
 
-/* ======================================================
-   EFEITO DE MOVIMENTO DOS CARDS
-   SOMENTE DESKTOP
-====================================================== */
+mensagem.addEventListener("input", () => {
 
-const canHover =
-    window.matchMedia(
-        "(hover: hover)"
-    ).matches;
+    charCount.textContent =
+        `${mensagem.value.length} / 500`;
+
+});
 
 
+/* MÁSCARA TELEFONE */
 
-if (canHover) {
+telefone.addEventListener("input", event => {
 
-    cards.forEach(card => {
+    let value =
+        event.target.value.replace(/\D/g, "");
 
-
-        card.addEventListener(
-            "mousemove",
-            event => {
-
-                /*
-                    Efeito extremamente
-                    sutil de perspectiva.
-                */
-
-                const rect =
-                    card.getBoundingClientRect();
+    value =
+        value.substring(0, 11);
 
 
-                const x =
-                    event.clientX -
-                    rect.left;
+    if (value.length > 10) {
 
-
-                const y =
-                    event.clientY -
-                    rect.top;
-
-
-                const centerX =
-                    rect.width / 2;
-
-
-                const centerY =
-                    rect.height / 2;
-
-
-                const rotateX =
-                    (y - centerY) /
-                    centerY * -1.2;
-
-
-                const rotateY =
-                    (x - centerX) /
-                    centerX * 1.2;
-
-
-                card.style.transform =
-                    `
-                    translateY(-10px)
-                    perspective(900px)
-                    rotateX(${rotateX}deg)
-                    rotateY(${rotateY}deg)
-                    `;
-
-            }
+        value = value.replace(
+            /^(\d{2})(\d{5})(\d{4})$/,
+            "($1) $2-$3"
         );
 
+    } else if (value.length > 6) {
 
-
-        card.addEventListener(
-            "mouseleave",
-            () => {
-
-                card.style.transform = "";
-
-            }
+        value = value.replace(
+            /^(\d{2})(\d{4})(\d{0,4})$/,
+            "($1) $2-$3"
         );
 
-    });
+    } else if (value.length > 2) {
 
-}
+        value = value.replace(
+            /^(\d{2})(\d+)/,
+            "($1) $2"
+        );
+
+    } else if (value.length > 0) {
+
+        value = value.replace(
+            /^(\d{0,2})/,
+            "($1"
+        );
+
+    }
+
+
+    event.target.value = value;
+
+});
+
+
+/* ENVIO */
+
+contactForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+
+    if (!contactForm.checkValidity()) {
+
+        contactForm.reportValidity();
+
+        return;
+
+    }
+
+
+    formStatus.className =
+        "form-status success";
+
+
+    formStatus.textContent =
+        "Formulário preenchido corretamente. Preparando o envio...";
+
+});

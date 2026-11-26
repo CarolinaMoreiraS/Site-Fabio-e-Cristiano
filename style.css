@@ -49,13 +49,9 @@ html {
 body {
 
     min-height: 100vh;
-
     overflow-x: hidden;
-
     background: var(--bg);
-
     color: var(--text);
-
     font-family:
         "DM Sans",
         sans-serif;
@@ -342,7 +338,7 @@ button {
     color:
         var(--shadow);
 
-    font-size: 11px;
+    font-size: 14px;
 
     font-weight: 600;
 
@@ -598,7 +594,7 @@ button {
     color:
         var(--green);
 
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -703,7 +699,7 @@ button {
     color:
         var(--navy);
 
-    font-size: 11px;
+    font-size: 13px;
 
     font-weight: 700;
 
@@ -1074,7 +1070,7 @@ button {
     color:
         var(--green);
 
-    font-size: 8px;
+    font-size: 12px;
 
     font-weight: 700;
 
@@ -1095,7 +1091,7 @@ button {
     color:
         var(--text-light);
 
-    font-size: 5px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -1281,7 +1277,7 @@ button {
     color:
         #fff;
 
-    font-size: 6px;
+    font-size: 10px;
 
 }
 
@@ -1548,7 +1544,7 @@ button {
     color:
         var(--text-soft);
 
-    font-size: 5px;
+    font-size: 10px;
 
     box-shadow:
         0 5px 15px rgba(20,57,64,.07);
@@ -1586,7 +1582,7 @@ button {
     color:
         var(--green);
 
-    font-size: 6px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -1618,7 +1614,7 @@ button {
     color:
         var(--text-soft);
 
-    font-size: 10px;
+    font-size: 12px;
 
     line-height: 1.7;
 
@@ -1655,7 +1651,7 @@ button {
     color:
         var(--text);
 
-    font-size: 8px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -1798,7 +1794,7 @@ button {
     color:
         var(--green-light);
 
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: 700;
 
@@ -1890,7 +1886,7 @@ button {
     color:
         var(--green-light);
 
-    font-size: 7px;
+    font-size: 10px;
 
 }
 
@@ -1902,7 +1898,7 @@ button {
     margin:
         9px 0 6px;
 
-    font-size: 10px;
+    font-size: 12px;
 
 }
 
@@ -1912,7 +1908,7 @@ button {
     color:
         rgba(255,255,255,.45);
 
-    font-size: 8px;
+    font-size: 10px;
 
     line-height: 1.6;
 
@@ -1946,7 +1942,7 @@ button {
     color:
         var(--green);
 
-    font-size: 7px;
+    font-size: 10px;
 
     font-weight: 700;
 
